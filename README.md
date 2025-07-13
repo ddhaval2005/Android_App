@@ -6,6 +6,7 @@ Phase 1: Project Setup (1 week)
 - Choose Kotlin as the language.
 - Enable necessary Jetpack libraries in build.gradle (Hilt, Room, Retrofit, WorkManager, Compose).
 Example dependencies block (app-level build.gradle):
+
         implementation "androidx.compose.ui:ui:1.x.x"
         implementation "com.squareup.retrofit2:retrofit:2.x.x"
         implementation "androidx.room:room-runtime:2.x.x"
@@ -66,7 +67,9 @@ Phase 8: AI Deal Predictor (2 weeks)
 - Collect past price data, train a simple TensorFlow Lite model to forecast short-term dips.
 - Bundle the .tflite in assets/.
 - In Repository, load TFLite interpreter:
-     Interpreter(loadModelFile(context, "deal_predictor.tflite"))
+
+        Interpreter(loadModelFile(context, "deal_predictor.tflite"))
+  
 - Expose a suspend fun predictBestBuyDate(product: Product): LocalDate.
 Show the predicted date on the Detail Screen.
 
